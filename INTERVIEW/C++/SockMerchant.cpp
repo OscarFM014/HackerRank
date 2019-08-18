@@ -3,16 +3,29 @@
 using namespace std;
 
 // Complete the sockMerchant function below.
+//TO RUN C++ ON MAC
+// g++ -std=c++11 -o NAME NAME.cpp
+//./NAME
+
 int sockMerchant(int n, vector<int> ar) {
   vector<int> aux;
-  int cont;
-  for(int i = 0; i < ar.size(); i++){
-    // Get index of element from iterator
-    int index = std::find(ar.aux(), ar.aux(), ar[i]);
-    cout << index;
+  aux.push_back(ar[0]);
+  int cont = 0;
 
+  for(int i = 1; i < ar.size(); i++){
+
+    for(int j = 0; j < aux.size(); j++){
+
+      if (ar[i] == aux[j]){
+        aux.erase(aux.begin() + j);
+        cont = cont + 1;
+      }else{
+        aux.push_back(ar[i]);
+      }
+
+    }
   }
-  return 0;
+  return cont;
 }
 
 
@@ -20,15 +33,10 @@ int sockMerchant(int n, vector<int> ar) {
 int main()
 {
     int n = 9;
-    vector<int> ar;
-    ar.push_back(1);
-    ar.push_back(2);
-    ar.push_back(3);
-    ar.push_back(3);
-    ar.push_back(5);
-    ar.push_back(1);
+    vector<int> vect{ 1,2,3,4,5,1 };
+    cout <<sockMerchant(n, vect)<< endl;
 
-    int result = sockMerchant(9, ar);
+
 
 
     return 0;
