@@ -20,4 +20,4 @@ def gettingWays(n):
     return num[n]
 
 staircase = 4
-print(gettingWays(staircase))
+print(ways(staircase))
