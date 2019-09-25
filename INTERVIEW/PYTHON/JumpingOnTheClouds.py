@@ -2,29 +2,33 @@
 def jumpingOnClouds(c):
     pos = 0
     salto = 0
-    flag = True
-    while pos < len(c):  
-        #One cloud
-        if pos+1 <= len(c):
-            if c[pos+1] == 0:
+    flag = False
+    while pos < len(c): 
+        #Two clouds
+        if pos+2 < len(c):                  #is there a cloud? 
+            if c[pos+2] == 0:               #save cloud
                 salto = salto + 1
-                flag = True
-                pos = pos + 1
+                pos = pos + 2
         else:
-            return salto 
+            return salto
 
-        if pos+2 <= len(c):
-            if c[pos+2] == 0:
-                if flag:
-                    salto = salto - 1
-                    flag = False
-                salto = salto + 1
+        #One cloud
+        if pos+1 < len(c):                #is there a cloud? 
+            if c[pos+1] == 0:              #save cloud
+                salto = salto + 1          #salto ++ 
+                flag = True                          # it jump!
                 pos = pos + 1
-        else:
-            return salto        
+        else: 
+            return salto
+
         
 
+        
+                    
 
+    
 c = [0,0,1,0,0,0,0,1,0,0]
+d = [0,0,0,1,0,0]
 
 print(jumpingOnClouds(c))
+print(jumpingOnClouds(d))
