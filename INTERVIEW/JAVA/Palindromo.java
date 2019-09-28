@@ -1,22 +1,21 @@
 public class Palindromo{
 
-    static boolean palindromo(String pal){
-        if (pal.length() == 0){return true;}
+    static boolean palindromo(String s){
+        if (s.length() == 0){return true;}
 
+        s = s.toLowerCase();
         int f = 0;
-        int l = pal.length()-1;
-        while (f != l && f < l){
-            while (Character.isLetter(pal.charAt(f)) == false){
-                System.out.println("false");
+        int l = s.length()-1;
+        while (f < l){
+           while (f < l && !Character.isLetterOrDigit(s.charAt(f))){
                 f++;
             }
 
-            while (Character.isLetter(pal.charAt(l)) == false){
-                System.out.println("false");
+            while ( f < l && !Character.isLetterOrDigit(s.charAt(l))){
                 l--;
             }
 
-            if( pal.charAt(f) != (pal.charAt(l))){
+            if( s.charAt(f) != (s.charAt(l))){
                 return false;
             }
 
@@ -32,7 +31,7 @@ public class Palindromo{
 
 
     public static void main (String args[]){
-        String word = "ava";
+        String word = ",.";
         System.out.println(palindromo(word));
 
 
