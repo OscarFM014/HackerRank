@@ -1,3 +1,4 @@
+//Reloj
 public class Reloj{
 
     static double grades(int[][] time){
