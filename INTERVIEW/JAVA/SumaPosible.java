@@ -3,7 +3,7 @@ import java.util.Hashtable;
 public class SumaPosible{
 
     static int[] sumaPosible(int n ,int [] numeros ){
-        int resultado = 0;
+
         int [] answer = new int [2];
         Hashtable <Integer, Integer> h = new Hashtable<Integer, Integer>();
 
