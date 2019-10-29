@@ -3,6 +3,8 @@ public class Parity{
 
     public static String solve(int x, int n, int[] lista){
 
+
+
         Long number = 0L;
         n = n -1;
 
@@ -14,8 +16,10 @@ public class Parity{
 
         if (number % 2 == 0){
             return "Even";
-        }else{
+        }else if(number % 2 !=0){
             return "Odd";
+        }else{
+            return "Even";
         }
     }
 

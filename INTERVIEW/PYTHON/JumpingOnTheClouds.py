@@ -1,9 +1,10 @@
 # Complete the jumpingOnClouds function below.
-def jumpingOnClouds(c):
-    pos = 0
-    salto = 0
-    flag = False
-    while pos < len(c): 
+def jumpingOnClouds(lista):
+    first = 0
+    second = 0
+    while second < len(c):
+        if (second < len(c)):
+            
         
         
 

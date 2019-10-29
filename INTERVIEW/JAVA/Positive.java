@@ -37,7 +37,7 @@ public class Positive{
     public static void main(String args[]){
         Scanner res = new Scanner(System.in);
         int n = res.nextInt();
-        int [] lista = new int [n];
+        int [] lista = new int [n*];
 
         for (int i = 0; i < n; i++){
             int num = res.nextInt();

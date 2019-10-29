@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Grapes",
+            "request": "launch",
+            "mainClass": "Grapes"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Diverse",
             "request": "launch",
             "mainClass": "Diverse"
