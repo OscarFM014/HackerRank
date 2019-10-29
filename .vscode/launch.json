@@ -5,6 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - Diverse",
+            "request": "launch",
+            "mainClass": "Diverse"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SigleNumber",
+            "request": "launch",
+            "mainClass": "SigleNumber"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TwoSum",
+            "request": "launch",
+            "mainClass": "TwoSum"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

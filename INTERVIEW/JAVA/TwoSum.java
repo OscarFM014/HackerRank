@@ -4,7 +4,7 @@ import java.util.Hashtable;
 class TwoSum{
 
     public static int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> index = new HashMap<Integer, Integer> ();
+        Hashtable<Integer, Integer> index = new Hashtable<Integer, Integer> ();
         int [] resultado = new int [2];
 
         for(int num = 0; num < nums.length; num ++ ){
@@ -16,6 +16,11 @@ class TwoSum{
                 index.put(target - nums[num], num);
             }
         }
+
+        for (int i = 0; i < resultado.length; i++){
+            System.out.println(resultado[i]);
+        }
+        
         return resultado;
 
        
@@ -30,5 +35,6 @@ class TwoSum{
         int [] lista = {1,2,3,4,5};
         int n = 6;
         System.out.println(twoSum(lista,n));
+        
     }
 }
