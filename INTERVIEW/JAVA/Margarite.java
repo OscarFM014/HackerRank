@@ -1,21 +1,36 @@
 import java.util.Scanner;
+import java.math.*;
 public class Margarite {
 
-
-
-
     public static int solve(int inicio , int fin){
-        int result = 0; 
+        int diferencia = fin - inicio;
 
-        while (inicio <= fin){
+        if (diferencia % 2 == 0){
+            diferencia = (diferencia /2) + inicio;
             if (inicio % 2 == 0){
-                result =  result + inicio;
+                return diferencia;
             }else{
-                result =  result - inicio;
+                return diferencia*-1;
             }
+        }else{
+            diferencia =  (diferencia + 1) / 2;
+            if (inicio % 2 == 0){
+                return diferencia*-1;
+            }else{
+                return diferencia ;
+            }
+        }
+
+        
+
+
+
+        /*
+        while (inicio <= fin){
+            result = result + ( inicio * (int)Math.pow(-1, inicio) ); 
             inicio = inicio + 1;
-            }
-        return result;
+        }
+        return result;*/
 
     }
 
