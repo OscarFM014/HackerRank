@@ -1,0 +1,38 @@
+
+public class Pruebas {
+	
+	 public static void solve(int size, String word){
+	        HashSet <Character> letras = new HashSet<>();
+
+	        for (int i = 0; i < size-1; i++){
+	            letras.add( word.charAt(i) );
+	        }
+
+	        if (letras.size() <= 1){
+	            System.out.println("NO");
+	        }else{
+	            System.out.println("YES");
+	            for(char i : letras){
+	                System.out.print(i);
+	            }
+	        }
+
+
+
+
+
+
+	    }
+
+
+	    public static void main(String ars[]){
+	        Scanner res = new Scanner(System.in);
+	        int size = res.nextInt();
+	        String word = res.nextLine();
+
+	        solve(size,word);
+	        res.close();
+
+	    }
+
+}

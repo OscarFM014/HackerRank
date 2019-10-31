@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Worm",
+            "request": "launch",
+            "mainClass": "Worm"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Grapes",
             "request": "launch",
             "mainClass": "Grapes"
