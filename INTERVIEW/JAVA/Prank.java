@@ -3,6 +3,7 @@ public class Prank{
 
 
     public static int solve(int size, int [] numbers){
+        int verdaderos= 0;
         int cuenta = 0;
         boolean [] valores = new boolean[size]; 
         
