@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StepsMenor{
+public class Stepsmayor{
 
 
     public static int solve(int size, int[] numeros){
@@ -8,7 +8,7 @@ public class StepsMenor{
         int cont = 0;
         for (int i = 0; i < size-1; i++){
 
-            if (numeros[i] < numeros[i+1] && numeros[i] < numeros[i+1]){
+            if (numeros[i] < numeros[i+1] && numeros[i] != numeros[i+1]){
                 aux = aux + 1;
             }else{
                 aux = 0;
