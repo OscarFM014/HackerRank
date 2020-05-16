@@ -37,6 +37,6 @@ public class PetyaandStrings {
         System.out.println(bigger(fLine, sLine));
         res.close();
 
-        // Oscar
     }
 }
+// Oscar
