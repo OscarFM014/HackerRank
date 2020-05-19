@@ -32,9 +32,7 @@ public class Candies {
                 sum = sum + parSum;
                 parSum = 0;
                 flag = 0;
-            } else
-
-            {
+            } else {
                 for (int pos = 1; pos < aux.length; pos++) {
                     array[pos - 1] = Integer.parseInt(aux[pos]);
                 }
