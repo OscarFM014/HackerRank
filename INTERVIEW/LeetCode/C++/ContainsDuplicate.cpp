@@ -16,14 +16,25 @@ public:
         {
             return false;
         }
+        int right = nums.size() - 1;
+        int left = 0;
         unordered_set<int> int_set;
-        for (int i : nums)
+
+        while (left < right)
         {
-            if (int_set.find(i) != int_set.end())
+            if (int_set.find(nums[right]) != int_set.end())
             {
                 return true;
             }
-            int_set.insert(i);
+            int_set.insert(nums[right]);
+            right--;
+
+            if (int_set.find(nums[left]) != int_set.end())
+            {
+                return true;
+            }
+            int_set.insert(nums[left]);
+            left++;
         }
         return false;
     }
