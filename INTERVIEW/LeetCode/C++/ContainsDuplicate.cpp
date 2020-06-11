@@ -16,22 +16,14 @@ public:
         {
             return false;
         }
-        int number_vector;
-
         unordered_set<int> int_set;
-        for (int i = 0; i < nums.size(); i++)
+        for (int i : nums)
         {
-            number_vector = nums[i];
-            //cout << "Number: " << number_vector << endl;
-
-            if (int_set.find(number_vector) == int_set.end())
-            {
-                int_set.insert(number_vector);
-            }
-            else
+            if (int_set.find(i) != int_set.end())
             {
                 return true;
             }
+            int_set.insert(i);
         }
         return false;
     }
