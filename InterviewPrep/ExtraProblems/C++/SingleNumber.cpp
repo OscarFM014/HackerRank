@@ -22,28 +22,13 @@ public:
   
         Value of 'twos' will be set as 0, 3, 3 and 1 after 1st,  
         2nd, 3rd and 4th iterations respectively */
-            cout << "twos = twos | (ones & arr[i]);" << endl;
-            cout << "ones & arr[" << i << "]: " << (ones & arr[i]) << endl;
-            cout << "twos before: " << twos << endl;
-
             twos = twos | (ones & arr[i]);
-
-            cout << "twos after: " << twos << endl;
-            cout << endl;
             /* XOR the new bits with previous 'ones' to get all bits  
         appearing odd number of times  
   
         Value of 'ones' will be set as 3, 0, 2 and 3 after 1st,  
         2nd, 3rd and 4th iterations respectively */
-            cout << "ones = ones ^ arr[i];" << endl;
-            cout << "nes ^ arr[" << i << "]: " << (ones ^ arr[i]) << endl;
-            cout << "ones before: " << twos << endl;
-
             ones = ones ^ arr[i];
-
-            cout << "ones after: " << ones << endl;
-            cout << endl;
-
             /* The common bits are those bits which appear third time  
         So these bits should not be there in both 'ones' and 'twos'.  
         common_bit_mask contains all these bits as 0, so that the bits can  
