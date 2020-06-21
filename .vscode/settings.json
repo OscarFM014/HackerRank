@@ -4,6 +4,8 @@
         "iosfwd": "cpp",
         "ios": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp"
     }
 }
