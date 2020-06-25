@@ -8,17 +8,28 @@ class Solution
 public:
     int maxSubArray(vector<int> &nums)
     {
-        if (nums.size() <= 1)
-        {
-            return nums[0];
-        }
+
+        int maxSol = nums[0];
+        int sumSub = 0;
 
         for (int i = 0; i < nums.size(); i++)
         {
-            for (int j = 0; j < nums.size(); j++)
+            sumSub = maxPrevSum(sumSub + nums[i], nums[i]);
+            if (sumSub >= maxSol)
             {
-                        }
+                maxSol = sumSub;
+            }
         }
+        return maxSol;
+    }
+
+    int maxPrevSum(int prevSum, int newNum)
+    {
+        if (prevSum <= newNum)
+        {
+            return newNum;
+        }
+        return prevSum;
     }
 };
 
@@ -34,7 +45,7 @@ int main()
         my_vector.push_back(my_arr[i]);
     }
 
-    solution.maxSubArray(my_vector);
+    cout << solution.maxSubArray(my_vector) << endl;
 
     return 0;
 }
