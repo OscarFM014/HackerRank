@@ -1,3 +1,6 @@
+//Problem
+//https://leetcode.com/problems/maximum-subarray/
+
 #include <iostream>
 #include <vector>
 
@@ -49,3 +52,5 @@ int main()
 
     return 0;
 }
+
+//Oscar
