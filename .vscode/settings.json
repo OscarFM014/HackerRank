@@ -6,6 +6,7 @@
         "iostream": "cpp",
         "vector": "cpp",
         "__config": "cpp",
-        "__nullptr": "cpp"
+        "__nullptr": "cpp",
+        "stack": "cpp"
     }
 }
