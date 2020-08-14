@@ -7,6 +7,7 @@
         "vector": "cpp",
         "__config": "cpp",
         "__nullptr": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "string": "cpp"
     }
 }
