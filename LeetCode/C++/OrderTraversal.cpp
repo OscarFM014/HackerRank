@@ -14,7 +14,8 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
-vector<vector<int > > order(TreeNode *root, vector<vector<int > > elements, int level)
+
+vector<vector<int>> order(TreeNode *root, vector<vector<int>> elements, int level)
 {
     if (root != NULL)
     {
@@ -26,37 +27,44 @@ vector<vector<int > > order(TreeNode *root, vector<vector<int > > elements, int 
     return elements;
 }
 
-
-vector<vector<int > > levelOrder(TreeNode *root)
+vector<vector<int>> levelOrder(TreeNode *root)
 {
-    vector<vector<int > > elements;
+
+    vector<vector<int>> elements;
+    if (root == NULL)
+    {
+        return elements;
+    }
     int level = 0;
     elements = order(root, elements, level);
 
+    vector<vector<int>>::iterator it;
+    it = elements.begin();
     for (int i = 0; i < elements.size(); i++)
     {
-        for (int j = 0; j < elements[i].size(); i++)
+        if (elements[i].size() == 0)
         {
-            cout << elements[i][j] << "," << endl;
+            elements.erase(it + i);
         }
     }
+
     return elements;
 }
-
-
 
 int main()
 {
 
-    TreeNode *tree;
-    tree->val = 4;
-    tree->right->val = 6;
-    tree->left->val = 2;
-    tree->left->left->val = 1;
-    tree->left->right->val = 3;
-    tree->right->right->val = 7;
+    /*  TreeNode tree;
+    tree.val = 4;
+    tree.right->val = 6;
+    tree.left->val = 2;
+    tree.left->left->val = 1;
+    tree.left->right->val = 3;
+    tree.right->right->val = 7;
+    levelOrder(tree.left); */
 
-    cout << tree->val << endl;
-    levelOrder(tree);
+    vector<vector<int>> matrix;
+    cout << matrix[0].size() << endl;
     return 0;
 }
+//Oscar
