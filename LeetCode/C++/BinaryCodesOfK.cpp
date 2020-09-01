@@ -30,3 +30,5 @@ int main()
     int k = 2;
     cout << hasAllCodes(s, k) << endl;
 }
+
+//Oscar
