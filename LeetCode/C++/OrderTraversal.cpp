@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 //Definition for a binary tree node.
@@ -17,54 +18,43 @@ struct TreeNode
 
 vector<vector<int>> order(TreeNode *root, vector<vector<int>> elements, int level)
 {
-    if (root != NULL)
-    {
-        elements.push_back(vector<int>());
-        elements = order(root->left, elements, level + 1);
-        elements[level].push_back(root->val);
-        elements = order(root->right, elements, level + 1);
-    }
-    return elements;
 }
 
 vector<vector<int>> levelOrder(TreeNode *root)
 {
-
     vector<vector<int>> elements;
     if (root == NULL)
     {
         return elements;
     }
-    int level = 0;
-    elements = order(root, elements, level);
-
-    vector<vector<int>>::iterator it;
-    it = elements.begin();
-    for (int i = 0; i < elements.size(); i++)
+    queue<TreeNode *> nodes;
+    nodes.push(root);
+    while (!nodes.empty())
     {
-        if (elements[i].size() == 0)
+        vector<int> level;
+        int size = nodes.size();
+        for (int i = 0; i < size; i++)
         {
-            elements.erase(it + i);
+            TreeNode *current = nodes.front();
+            level.push_back(current->val);
+            if (current->left != NULL)
+            {
+                nodes.push(current->left);
+            }
+            if (current->right != NULL)
+            {
+                nodes.push(current->right);
+            }
+            nodes.pop();
         }
+        elements.push_back(level);
     }
-
     return elements;
 }
 
 int main()
 {
 
-    /*  TreeNode tree;
-    tree.val = 4;
-    tree.right->val = 6;
-    tree.left->val = 2;
-    tree.left->left->val = 1;
-    tree.left->right->val = 3;
-    tree.right->right->val = 7;
-    levelOrder(tree.left); */
-
-    vector<vector<int>> matrix;
-    cout << matrix[0].size() << endl;
     return 0;
 }
 //Oscar
