@@ -1,3 +1,5 @@
+//Problem: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -43,3 +45,5 @@ int main()
 
     return 0;
 }
+
+//Oscar
