@@ -1,3 +1,4 @@
+//Problem: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -8,43 +9,39 @@ vector<int> plusOne(vector<int> &digits)
     {
         return digits;
     }
+
     int right = digits.size() - 1;
-    int aux = digits.at(right) + 1;
 
-    while (aux == 10 && right != 0)
+    while (right >= 0)
     {
-        digits.at(right) = 0;
+        if (digits.at(right) < 9)
+        {
+            digits.at(right)++;
+            return digits;
+        }
+        digits[right] = 0;
         right--;
-        aux = digits.at(right) + 1;
     }
 
-    if (aux == 10)
+    vector<int> res(digits.size() + 1, 0);
+    res[0] = 1;
+    /*   for (int i = 0; i < res.size(); i++)
     {
-        digits.at(right) = 0;
-        digits.insert(digits.begin(), 1);
-    }
-    else
-    {
-        digits.at(right) = aux;
-    }
-
-    return digits;
+        cout << res[i] << endl;
+    } */
+    return res;
 }
 
 int main()
 {
     vector<int> vec;
-    vec.push_back(1);
-    vec.push_back(0);
-    vec.push_back(0);
-    vec.push_back(7);
+    vec.push_back(9);
+    vec.push_back(9);
+    vec.push_back(9);
+    vec.push_back(9);
 
     plusOne(vec);
-
-    for (int i = 0; i < vec.size(); i++)
-    {
-        cout << vec.at(i) << endl;
-    }
-
     return 0;
 }
+
+//Oscar
